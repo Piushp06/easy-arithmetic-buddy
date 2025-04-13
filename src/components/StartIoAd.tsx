@@ -15,10 +15,10 @@ const StartIoAd = () => {
     script.async = true;
     script.onload = () => {
       if (window.startAppSDK) {
-        // Initialize the SDK with your account ID
-        // Replace '186140332' with your actual account ID if different
+        // Initialize the SDK with account ID and app ID
         window.startAppSDK.init({
           accountId: '186140332',
+          appId: '203906093',
           adType: 'banner', // or 'interstitial', 'rewarded', etc.
           bannerSize: 'BANNER', // or 'MREC', 'LEADERBOARD', etc.
         });
