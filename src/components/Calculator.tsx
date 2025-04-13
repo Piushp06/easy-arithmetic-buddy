@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Display from './Display';
 import CalculatorButton from './CalculatorButton';
+import StartIoAd from './StartIoAd';
 import { performCalculation } from '../utils/calculatorUtils';
 import { Divide, X, Minus, Plus, Equal } from 'lucide-react';
 
@@ -89,6 +90,9 @@ const Calculator = () => {
   return (
     <div className="calculator-container p-4">
       <Display input={input} result={result} />
+      
+      {/* Add the Start.io ad at the top of the calculator */}
+      <StartIoAd />
       
       <div className="grid grid-cols-4 gap-3 mt-4">
         {/* First row */}
