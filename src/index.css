@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,20 +36,19 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Calculator specific colors */
+    --number-button: 220 14% 96%;
+    --operation-button: 250 95% 76%;
+    --equal-button: 250 95% 76%;
+    --control-button: 220 13% 91%;
   }
 
   .dark {
@@ -97,5 +97,35 @@
 
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #9b87f5 0%, #7aa3f5 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Calculator Specific Styles */
+@layer components {
+  .calculator-container {
+    @apply max-w-sm mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden;
+  }
+
+  .calculator-button {
+    @apply flex items-center justify-center rounded-full text-xl font-medium transition-all duration-150 
+    active:scale-95 shadow-sm hover:shadow-md;
+  }
+
+  .number-button {
+    @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
+  }
+
+  .operation-button {
+    @apply bg-purple-500 text-white hover:bg-purple-600;
+  }
+
+  .control-button {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .equal-button {
+    @apply bg-purple-500 text-white hover:bg-purple-600;
   }
 }
