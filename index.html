@@ -56,5 +56,36 @@
     <!-- Keep this for functionality -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- ✅ Add Click-to-Reward functionality -->
+    <div id="smartlink-container">
+      <button id="rewardButton" onclick="handleRewardClick()">Tap here to Earn Reward</button>
+    </div>
+
+    <script>
+      // Function to handle the reward process when user clicks
+      function handleRewardClick() {
+        // Simulate the reward process (e.g., showing a confirmation message or unlocking a feature)
+        
+        // Show loading or reward processing indication
+        alert("Please wait while we process your reward...");
+
+        // Trigger the ad view (can be an external ad or internal logic for reward system)
+        showRewardAd();
+
+        // Add a slight delay before confirming the reward, so the ad has time to load
+        setTimeout(() => {
+          // Provide a reward after ad click (you can replace this with actual reward logic like points or feature unlock)
+          alert("Congratulations! You've earned your reward.");
+          // Here you could add logic to unlock a feature or add points to the user's account
+        }, 3000); // 3 seconds delay to simulate reward processing time
+      }
+
+      // Function to show the ad before granting the reward
+      function showRewardAd() {
+        // Load the reward ad via the smart link (or popunder/ad network)
+        window.open('https://frayhalfyear.com/shdq0eyx5z?key=a0342c1d6d174a99be1097bda29676a2', '_blank');
+      }
+    </script>
   </body>
 </html>
